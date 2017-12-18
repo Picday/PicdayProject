@@ -29,14 +29,27 @@ public class PicdayActivity extends AppCompatActivity{
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        /*if(id == R.id.videomaker){
+        if(id == R.id.make_video){
             // lo ideal aquí sería hacer un intent para abrir una nueva clase como lo siguiente
-            Log.i("ActionBar", "Settings!");
-            Intent about = new Intent(getApplicationContext(), About.class);
+            Log.i("ActionBar", "Make a video!");
+            Intent about = new Intent(getApplicationContext(), PicdayActivity.class );
             startActivity(about);
             return true;
         }
-        return super.onOptionsItemSelected(item);*/
-        return true;
+        if(id == R.id.video_gallery){
+            // lo ideal aquí sería hacer un intent para abrir una nueva clase como lo siguiente
+            Log.i("ActionBar", "VideoGallery!");
+            Intent about = new Intent(getApplicationContext(), PicdayActivity.class);
+            startActivity(about);
+            return true;
+        }
+        if(id == R.id.settings){
+            // lo ideal aquí sería hacer un intent para abrir una nueva clase como lo siguiente
+            Log.i("ActionBar", "Settings!");
+            Intent about = new Intent(getApplicationContext(), PicdayActivity.class);
+            startActivity(about);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
