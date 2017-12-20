@@ -21,6 +21,7 @@ public class VideoListAdapter extends ArrayAdapter<Video> {
         super(context, resource, objects);
     }
 
+
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
