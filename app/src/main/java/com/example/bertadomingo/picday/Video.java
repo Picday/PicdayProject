@@ -15,5 +15,4 @@ public class Video {
         this.data = data;
     }
 
-
 }

@@ -1,8 +1,10 @@
 package com.example.bertadomingo.picday;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.VideoView;
 
 public class VideoGalleyActivity extends AppCompatActivity {
 
@@ -12,6 +14,19 @@ public class VideoGalleyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video_galley);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_video_galley);
+
+                VideoView videoView = (VideoView) findViewById(R.id.videoView_video);
+
+        //pujar un video i cargar-lo aqui!!
+        /*
+                Uri path = Uri.parse("android.resource://com.example.reproducirvideo/"
+                        + R.raw.VideoExample);
+                videoView.setVideoURI(path);
+                videoView.start();*/
     }
 
 
