@@ -32,7 +32,7 @@ public class PicdayActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Log.i("ActionBar", "Make a video!");
                 //Aqui hem de posar com entrar a la camera per a fer la foto
-                Intent about = new Intent(getApplicationContext(), PicdayActivity.class );
+                Intent about = new Intent(getApplicationContext(), CameraActivity.class );
                 startActivity(about);
             }
         });
