@@ -17,9 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".VideoGalleyActivity" />
-        <activity android:name=".DayActivity" />
+        <activity android:name=".FromActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".CameraActivity" />
+        <activity android:name=".UntilActivity"></activity>
     </application>
 
 </manifest>

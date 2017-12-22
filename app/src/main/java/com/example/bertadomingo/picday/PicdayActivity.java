@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
@@ -48,7 +47,7 @@ public class PicdayActivity extends AppCompatActivity{
         if(id == R.id.make_video){
             // lo ideal aquí sería hacer un intent para abrir una nueva clase como lo siguiente
             Log.i("ActionBar", "Make a video!");
-            Intent about = new Intent(getApplicationContext(), DayActivity.class );
+            Intent about = new Intent(getApplicationContext(), FromActivity.class );
             startActivity(about);
             return true;
         }

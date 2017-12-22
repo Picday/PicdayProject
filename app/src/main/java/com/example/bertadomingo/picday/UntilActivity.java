@@ -3,23 +3,29 @@ package com.example.bertadomingo.picday;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.TimePicker;
+import android.view.View;
+import android.widget.Button;
 
-public class SettingsActivity extends AppCompatActivity {
+public class UntilActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_until);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TimePicker tp = (TimePicker) findViewById(R.id.timePicker1);
+        Button btn_next = (Button) findViewById(R.id.btn_next);
 
-        //S'ha de crear un listener que vegi quan es canvia la hora
-        //tp.setOnTimeChangedListener();
+        //Si cliquem next ha d'anar a crear el video (VideoActivity)
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent about = new Intent(getApplicationContext(), PicdayActivity.class );
+                startActivity(about);
+            }
+        });
     }
 
     @Override
