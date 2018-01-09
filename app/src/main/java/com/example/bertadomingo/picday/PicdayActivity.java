@@ -88,6 +88,15 @@ public class PicdayActivity extends AppCompatActivity {
                 startActivity(about);
             }
         });
+
+        /*gridView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent about = new Intent(getApplicationContext(), FotoActivity.class );
+                startActivity(about);
+
+            }
+        });*/
     }
 
     private void mostrarPosicion(Location loc) {

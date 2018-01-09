@@ -28,7 +28,8 @@
         <activity android:name=".FromActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".CameraActivity" />
-        <activity android:name=".UntilActivity"></activity>
+        <activity android:name=".UntilActivity" />
+        <activity android:name=".FotoActivity"></activity>
     </application>
 
 </manifest>
