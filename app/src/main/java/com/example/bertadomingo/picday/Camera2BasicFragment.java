@@ -22,6 +22,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.ImageFormat;
@@ -53,6 +54,7 @@ import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -347,6 +349,7 @@ public class Camera2BasicFragment extends Fragment
         }
 
     };
+    private Context applicationContext;
 
     /**
      * Shows a {@link Toast} on the UI thread.
@@ -767,6 +770,11 @@ public class Camera2BasicFragment extends Fragment
      */
     private void takePicture() {
         lockFocus();
+        saveGps();
+    }
+
+    private void saveGps() {
+
     }
 
     /**
@@ -889,6 +897,9 @@ public class Camera2BasicFragment extends Fragment
         switch (view.getId()) {
             case R.id.picture: {
                 takePicture();
+
+                Intent about = new Intent(getActivity(), PicdayActivity.class );
+                startActivity(about);
                 break;
             }
             case R.id.info: {
@@ -1033,5 +1044,4 @@ public class Camera2BasicFragment extends Fragment
                     .create();
         }
     }
-
 }

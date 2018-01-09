@@ -34,7 +34,8 @@ public class GpsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gps);
 
-        btnActualizar = (Button)findViewById(R.id.BtnActualizar);
+        //btnActualizar = (Button)findViewById(R.id.BtnActualizar);
+        btnActualizar = (Button)findViewById(R.id.picture);
         lblFecha = (TextView) findViewById(R.id.fecha);
         adreca = (TextView) findViewById(R.id.lblAdreca);
 
