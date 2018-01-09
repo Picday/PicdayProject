@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
@@ -89,14 +90,13 @@ public class PicdayActivity extends AppCompatActivity {
             }
         });
 
-        /*gridView.setOnClickListener(new View.OnClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent about = new Intent(getApplicationContext(), FotoActivity.class );
                 startActivity(about);
-
             }
-        });*/
+        });
     }
 
     private void mostrarPosicion(Location loc) {
