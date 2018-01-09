@@ -1,24 +1,27 @@
 package com.example.bertadomingo.picday;
 
-        import android.location.Address;
-        import android.location.Geocoder;
-        import android.location.Location;
-        import android.location.LocationListener;
-        import android.location.LocationManager;
-        import android.os.Bundle;
-        import android.app.Activity;
-        import android.content.Context;
-        import android.text.format.Time;
-        import android.util.Log;
-        import android.view.Menu;
-        import android.view.View;
-        import android.view.View.OnClickListener;
-        import android.widget.Button;
-        import android.widget.TextView;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.support.v4.app.ActivityCompat;
+import android.text.format.Time;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 
-        import java.io.IOException;
-        import java.util.List;
-        import java.util.Locale;
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class GpsActivity extends Activity {
 
@@ -35,20 +38,20 @@ public class GpsActivity extends Activity {
         setContentView(R.layout.activity_gps);
 
         //btnActualizar = (Button)findViewById(R.id.BtnActualizar);
-        btnActualizar = (Button)findViewById(R.id.picture);
+        btnActualizar = (Button) findViewById(R.id.picture);
         lblFecha = (TextView) findViewById(R.id.fecha);
         adreca = (TextView) findViewById(R.id.lblAdreca);
 
         btnActualizar.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
 
-                Time today = new  Time(Time.getCurrentTimezone());
+                Time today = new Time(Time.getCurrentTimezone());
                 today.setToNow();
-                int dia=today.monthDay;
+                int dia = today.monthDay;
                 int mes = today.month;
                 int any = today.year;
-                mes=mes+1;
-                lblFecha.setText(dia +"/" + mes + "/" + any);
+                mes = mes + 1;
+                lblFecha.setText(dia + "/" + mes + "/" + any);
 
                 comenzarLocalizacion();
             }
@@ -56,13 +59,13 @@ public class GpsActivity extends Activity {
 
     }
 
-    private void comenzarLocalizacion()
-    {
+    private void comenzarLocalizacion() {
         //Obtenemos una referencia al LocationManager
         locManager =
-                (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+                (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         //Obtenemos la ˙ltima posiciÛn conocida
+
         Location loc =
                 locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
@@ -72,9 +75,14 @@ public class GpsActivity extends Activity {
             public void onLocationChanged(Location location) {
                 mostrarPosicion(location);
             }
-            public void onProviderDisabled(String provider){}
-            public void onProviderEnabled(String provider){}
-            public void onStatusChanged(String provider, int status, Bundle extras){
+
+            public void onProviderDisabled(String provider) {
+            }
+
+            public void onProviderEnabled(String provider) {
+            }
+
+            public void onStatusChanged(String provider, int status, Bundle extras) {
                 Log.i("", "Provider Status: " + status);
             }
         };

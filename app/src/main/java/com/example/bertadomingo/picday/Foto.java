@@ -7,6 +7,8 @@ package com.example.bertadomingo.picday;
 public class Foto {
     private String nombre;
     private int idDrawable;
+    private String lblFecha;
+    private String adreca;
 
     public Foto(String nombre, int idDrawable) {
         this.nombre = nombre;
