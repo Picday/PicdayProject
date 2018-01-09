@@ -93,6 +93,7 @@ public class PicdayActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //TODO: Com podem fer per passar-li la foto que s'ha clicat a la activitat de FotoActivity?
                 Intent about = new Intent(getApplicationContext(), FotoActivity.class );
                 startActivity(about);
             }
