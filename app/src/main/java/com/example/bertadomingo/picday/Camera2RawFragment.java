@@ -57,8 +57,6 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentContainer;
-import android.support.v4.app.FragmentController;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -121,7 +119,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * </ul>
  */
 public class Camera2RawFragment extends Fragment
-        implements View.OnClickListener, FragmentCompact.OnRequestPermissionsResultCallback {
+        implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
 
     /**
      * Conversion from screen rotation to JPEG orientation.
